@@ -2,13 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, tap } from 'rxjs';
 import { Daily, NewDaily } from '../models/classes/daily';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DailiesService {
 
-  private endpointURL = "http://localhost:3000/api/v1/dailies"
+  //private endpointURL = "http://localhost:3000/api/v1/dailies"
+  private endpointURL = `${environment.apiHost}/dailies`
 
   // BehaviorSubject, es un observable el cual guarda un estado inicial
   // Permite consultar el último valor emitido
