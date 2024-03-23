@@ -1,4 +1,4 @@
 export const environment = {
-    version:"dev",
+    version:"1.0",
     apiHost:""
 };
